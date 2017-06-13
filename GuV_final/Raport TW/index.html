@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Raport Tehnic</title>
+    <link rel="stylesheet" href="scholarly.css">
+    <link rel="stylesheet" href="prism-coy.css">
+    <script src="prism.js" defer></script>
+  </head>
+  <body prefix="prefix">
+    <header>
+      <p class="title">Raport Tehnic</p>
+      <p class="subtitle">Guess the VIP</p>
+    </header>
+
+
+
+    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+
+   
+     
+
+      <section>
+        <ol>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" typeof="schema:Person">
+              <span property="schema:givenName">Alexandru</span>
+              <span property="schema:familyName">Munteanu</span>
+            </a>              
+          </li>           
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" typeof="schema:Person">
+              <span property="schema:givenName">Georgiana</span>
+              <span property="schema:familyName">Alexii</span>
+            </a>              
+          </li>              
+        </ol>
+      </section>
+
+       
+
+<h1 style="padding-top:15%;">Index</h1>
+
+      <section style="font-size:120%;" typeof="sa:ReferenceList" id="index">
+      
+      <ol type="1">
+      <li><a href="#introducere">Introducere</li>                 
+      <li><a href="#detalii">Detalii despre joc</li>       
+      <li><a href="#tehnologii">Tehnologii utilizate</li>
+      <li><a href="#arhitectura">Arhitectura aplicatiei</li>
+      <li><a href="#workflow">Workflow</li>       
+      <li><a href="#tehnice">Detalii de implementare</li>
+      <li><a href="#scenarii">Scenarii de utilizare</li>                 
+      <li><a href="#aspect">Aspect orientativ</li>                 
+      <li><a href="#concluzie">Concluzie</li></a>
+      <li><a href="#referinte">Referinte</li></a>
+                      
+                  
+      
+      
+
+      </ol>
+    </section>
+
+
+
+     
+
+      <section typeof="sa:Abstract" id="introducere">
+        <h2>Introducere</h2>
+        <p>
+          <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/projects/xml-transform.php?pag=projects">
+          <project>GuV</project></a> este un joc disponibil pe <web>Web</web>.  
+          Scopul utilizatorului este sa ghiceasca persoana din imagine.
+
+        </p>
+      </section>
+
+       <section typeof="sa:Abstract" id="detalii">
+        <h2>Detalii despre joc</h2>
+        <p>
+        
+        <ul>
+
+        <li ><strong id="detaliu">Reprezentare utilizator:</strong> o persoana care v-a trebui sa ghiceasca cine este in imagine </li> 
+        </li> <li ><strong  id="detaliu">Dificultatea:</strong> va fi data de varsta celebritatii din imagine(cu cat mai tanar, cu atat mai greu de ghicit)</li>
+        <li ><strong id="detaliu">Numar nivele:</strong> jocul va avea un singur nivel</li>  
+        </ul>
+
+        </p>
+      </section>
+
+
+       <section typeof="sa:MaterialsAndMethods" id="tehnologii">
+        <h2>Tehnologii Utilizate</h2>
+
+
+        <h3>limbaje de programare utilizate</h3>
+
+        <p>
+        <ol>
+        <li>Pentru interfata grafica: se va utiliza <strong>HTML5</strong> si <strong>CSS</strong></li>
+        <li>Pentru exportul scorului se va folosi CSV <strong>PHP</strong> si <strong>XML</strong></li>
+        <li>Pentru generarea imaginilor si aparitia acestora se va utiliza  <strong>Photoshop</strong> si <strong>JavaScript</strong></li>
+
+        </ol>
+        </p>
+      </section>
+
+      <section typeof="sa:MaterialsAndMethods" id="arhitectura">
+
+      <h2> Arhitectura aplicatiei </h2>
+
+
+          <p>
+          <strong>Diagramele structurale</strong> reprezinta aspectul static al sistemului . Aceste aspecte statice reprezinta acele parți ale unei diagrame care formeaza structura principala.
+          </p>
+
+          
+
+         <figure typeof="sa:Image">
+            <img src="Component Diagram.jpg" width="880" height="655">
+            <figcaption>
+              
+            </figcaption>
+          </figure>
+
+			
+
+
+      </section>
+
+
+      <section typeof="sa:MaterialsAndMethods" id="tehnice">
+      <h2>Detalii tehnice</h2>
+
+      <h3> Arhitectura de ansamblu </h3>
+
+      <strong>Interfata Grafica:</strong>
+
+      <ul style="list-style-type:square">
+      <p>     
+      Interfata utilizatorului contine <u>butoanele</u>: HOMEPAGE, PLAY, HOW TO PLAY, LOGIN/LOG OUT, CONTACT, TEAM.      
+      </p>
+      </li>
+<p>
+      <li>
+      Atunci cand utilizatorul acceseaza TOPSCORES se va deschide un <u>submeniu</u> unde vor aparea urmatoarele optiuni: <i>NAME, SCORE</i>.
+      </li>
+</p>
+      <li>Jocul va fi dreptunghiular si va fi asezat in mijlocul paginii .</li>
+<p>
+      <li>Atunci cand utilizatorul va da click pe pictograma din dreapta sus (imaginea sa de utilizator) i se va deschide pagina ce va contine informatii despre: <i>Nivelul</i>, <i>Scorul </i>, cat si <i>timpul care s-a scurs pana in prezent la nivelul curent</i>.
+
+
+      </li>
+</p>
+
+
+
+      </ul>
+
+<p>
+       <strong>Desfasurarea jocului:</strong>
+<ul>
+<li>Jocul va avea un singur nivel.</li>
+<li>Dificultatea va fi data de varsta persoanei din imagine, cu cat mai tanara cu atat mai greu de ghicit cine este.</li>
+<li >Utilizatorul va trebui sa completeze numele in casuta, daca va ghici va putea merge la urmatoarea imagine. 
+</li>
+
+</ul>
+</p>
+
+<p>
+
+ <section typeof="sa:MaterialsAndMethods" id="workflow">
+<h2> Workflow </h2>
+<figure typeof="schema:Table" typeof="sa:MaterialsAndMethods">
+            <table>
+              <caption>
+                
+              </caption>
+              <thead>
+                <tr>
+                  <td>Nr. Ordine</td>
+                  <td>Sarcina</td>
+                  <td>Deadline</td>
+                  <td>Responsabil</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Stabilire design</td>
+                  <td>1.04.2016</td>
+                  <td>Toata echipa</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Studierea formatului Scholary HTML</td>
+                  <td>2.04.2016</td>
+                  <td>Munteanu Alexandru</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Crearea in mare a documentatiei</td>
+                  <td>1.04.2016</td>
+                  <td>Munteanu Alexandru</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Crearea primii pagini a aplicatiei</td>
+                  <td>14.04.2016</td>
+                  <td>Alexii Goergiana</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Crearea diagramei use-case</td>
+                  <td>14.04.2016</td>
+                  <td>Alexii Goergiana</td>
+                </tr>
+				<tr>
+                  <td>5</td>
+                  <td>Crearea diagramei de componente</td>
+                  <td>14.04.2016</td>
+                  <td>Munteanu Alexandru</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Transcriere in formatul Scholary HTML</td>
+                  <td>14.04.2016</td>
+                  <td>Munteanu Alexandru</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Crearea paginii de Home in CSS</td>
+                  <td>10.04.2016</td>
+                  <td>Toata echipa</td>
+                </tr>
+				<tr>
+                  <td>11</td>
+                  <td>FrontEnd</td>
+                  <td>15.04.2016</td>
+                  <td>Toata echipa</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Crearea paginilor "Highscores" si "Login" </td>
+                  <td>15.04.2016</td>
+                  <td>Toata echipa</td>
+                </tr>
+				<tr>
+                  
+                  <td>18</td>
+                  <td>Crearea TopScoruri prin interogari</td>
+                  <td>22.04.2016</td>
+                  <td>Alexii Georgiana</td>
+                </tr>
+				 <tr>
+                  <td>18</td>
+                  <td>Prelucrarea imaginilor</td>
+                  <td>22.04.2016</td>
+                  <td>Munteanu Alexandru</td>
+                </tr>
+
+              
+              </tbody>
+            </table>
+          </figure>
+
+
+</p>
+</section>
+      </section>
+
+
+ <section typeof="sa:Conclusion" id="scenarii">
+
+
+<h2>Scenarii de utilizare</h2>
+<br>
+<dl>
+<dt>1.Utilizatorul acceseaza pagina de start</dt>
+<dd>  Utilizatorului i se deschide pagina Home</dd>
+<dt>2.Utilizatorul apasa butonul LogIn</dt> 
+<dd> Utilizatorului i se deschide formularul de LogIn</dd> 
+<dt>3.Utilizatorul introduce contul si parola</dt>
+<dd>  Serverul verifica daca utilizatorul exista in baza de date</dd> 
+<dd>  Daca exista atunci va fi conectat la joc</dd> 
+<dd>  Daca nu i se va da posibilitatea de a se inregistra</dd> 
+<dt>4.Utilizatorul doreste sa se inregistreze</dt>
+<dd>  I se vor cere un cont unic si o parola cu ajutorul carora va fi identificat</dd> 
+<dt>5.Utilizatorul apasa butonul Play</dt>
+<dd>  Pe ecran va aparea prima imagine</dd> 
+<dd>  Primele vip-uri vor fi mai usor de ghicit.</dd> 
+<dt>6.Utilizatorul apasa butonul Team</dt>
+<dd>  Utilizatorului i se deschide pagina Team</dd> 
+<dd>  Din aceasta pagina utilizatorul poate contacta echipa prin email. </dd> 
+<dt>7.Utilizatorul apasa butonul TopScores</dt>
+<dd>  Utilizatorului i se deschide submeniul pentru TopScores</dd> 
+<dd>  Utilizatorul apasa butonul pentru scorurile dorite</dd> 
+<dt>8.Utilizatorul apasa butonul Contact</dt>
+<dd>  Utilizatorului i se deschide pagina de Contact</dd> 
+<dt>9.Utilizatorul apasa butonul User</dt>
+<dd>  Utilizatorului i se va afisa pagina ce contine informatiile sale</dd> 
+<dt>10.Utilizatorul apasa butonul de LogOut</dt>
+<dd> Utilizatorul va fi deconectat</dd> 
+</dl>
+
+
+ <section typeof="sa:MaterialsAndMethods" id="aspect">
+<h2> Aspect orientativ </h2>
+
+
+<div class="hover_img">
+     <a href="#">Pagina LogIn<span><img src="login.jpg" alt="image" height="300" width="300" /></span></a>
+</div>
+
+<div class="hover_img">
+     <a href="#">How to play<span><img src="howtoplay.jpg" alt="image" height="300" width="300" /></span></a>
+</div>
+
+<div class="hover_img">
+     <a href="#">Highscores<span><img src="highscores1.jpg" alt="image" height="300" width="300" /></span></a>
+</div>
+
+<div class="hover_img">
+     <a href="#">Team<span><img src="team.jpg" alt="image" height="300" width="300" /></span></a>
+</div>
+
+
+</section>
+
+      <section typeof="sa:Conclusion" id="concluzie">
+        <h2>Concluzie</h2>
+        <p>
+           De ce am ales acest design? 
+           Pentru a face cat mai usoara navigarea pentru utilizator.
+        </p>
+      </section>
+
+      <section typeof="sa:ReferenceList" id="referinte">
+        <h2>Referinte</h2>
+        <dl>
+        <dt> <a href="http://www.kevinboone.net/howto_report.html">    http://www.kevinboone.net/howto_report.html</a> </dt>
+
+          <dd id="ref-nyt" typeof="schema:ScholarlyArticle"
+              resource="http://www.kevinboone.net/howto_report.html">
+            <cite property="schema:name">
+              Informatii despre realizarea unui raport tehnic</cite>
+          </dd>
+
+
+
+          <dt> <a href="http://www.w3schools.com">    http://www.w3schools.com</a> </dt>
+
+          <dd id="ref-nyt" typeof="schema:ScholarlyArticle"
+              resource="http://www.w3schools.com">
+            <cite property="schema:name">
+              Informatii despre realizarea HTML,CSS,JavaScript</cite>
+          </dd>
+
+
+
+        </dl>
+      </section>
+    </article>
+    <footer>
+      <p>
+        
+        •
+        <a href="http://profs.info.uaic.ro/~busaco/teach/courses/web/projects/xml-transform.php?pag=projects#HAG"><project style="color: grey;">HAG</project></a>
+        •
+        <a href="http://students.info.uaic.ro" <infoiasi style="color: grey;">InfoIasi</infoiasi> </a>
+        •
+      </p>
+    </footer>
+  </body>
+</html>
